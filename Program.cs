@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 namespace DAL
 =======
@@ -11,6 +12,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace ProjectManagementPortal
 >>>>>>> cea2eebcbd29fd412e849c956bddabdc077dcfe0
+=======
+
+namespace BLL
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f
 {
     public class Program
     {
@@ -20,11 +25,15 @@ namespace ProjectManagementPortal
 
             // Add services to the container.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+<<<<<<< HEAD
 =======
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -56,6 +65,8 @@ namespace ProjectManagementPortal
                     });
             });
 >>>>>>> cea2eebcbd29fd412e849c956bddabdc077dcfe0
+=======
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f
 
             var app = builder.Build();
 
@@ -66,6 +77,9 @@ namespace ProjectManagementPortal
                 app.UseSwaggerUI();
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f
 
             app.UseHttpsRedirection();
 
@@ -77,6 +91,7 @@ namespace ProjectManagementPortal
             app.Run();
         }
     }
+<<<<<<< HEAD
 }
 =======
             app.UseCors("AllowLocalhost3000");
@@ -89,3 +104,6 @@ namespace ProjectManagementPortal
     }
 }
 >>>>>>> cea2eebcbd29fd412e849c956bddabdc077dcfe0
+=======
+}
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f

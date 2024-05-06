@@ -1,6 +1,7 @@
 {
   "Version": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "Hash": "NvNkjbP7YhQDHImUNQ8g4kok3ilcA4O4VDy6KkCNuJw=",
   "Source": "DAL",
   "BasePath": "_content/DAL",
@@ -11,10 +12,16 @@
   "Hash": "uzF0Gbsj8hOVUDR3l3OPzklcgeVrPcuklIRZpx9V1Gg=",
   "Source": "API",
   "BasePath": "_content/API",
+=======
+  "Hash": "58IJjtDZEQTu/Jl1SXc6XnULHwjQSOPeBnZ8B3aFTIc=",
+  "Source": "BLL",
+  "BasePath": "_content/BLL",
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [
     {
+<<<<<<< HEAD
       "Identity": "D:\\interviews\\Bwareq\\BLL\\BLL.csproj",
       "Version": 2,
       "Source": "BLL",
@@ -26,6 +33,8 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     },
     {
+=======
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f
       "Identity": "D:\\interviews\\Bwareq\\DAL\\DAL.csproj",
       "Version": 2,
       "Source": "DAL",
@@ -37,7 +46,10 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],
+<<<<<<< HEAD
 >>>>>>> c9b38fb9a9a66e07487ef62735a3bfb9a2f9462b
+=======
+>>>>>>> 09ffe02fb864ec030feecec2c70857408510194f
   "DiscoveryPatterns": [],
   "Assets": []
 }
