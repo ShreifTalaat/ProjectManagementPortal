@@ -1,11 +1,43 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "NvNkjbP7YhQDHImUNQ8g4kok3ilcA4O4VDy6KkCNuJw=",
   "Source": "DAL",
   "BasePath": "_content/DAL",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
+=======
+  "Hash": "uzF0Gbsj8hOVUDR3l3OPzklcgeVrPcuklIRZpx9V1Gg=",
+  "Source": "API",
+  "BasePath": "_content/API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\interviews\\Bwareq\\BLL\\BLL.csproj",
+      "Version": 2,
+      "Source": "BLL",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    },
+    {
+      "Identity": "D:\\interviews\\Bwareq\\DAL\\DAL.csproj",
+      "Version": 2,
+      "Source": "DAL",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+>>>>>>> c9b38fb9a9a66e07487ef62735a3bfb9a2f9462b
   "DiscoveryPatterns": [],
   "Assets": []
 }
