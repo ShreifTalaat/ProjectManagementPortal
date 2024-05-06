@@ -22,6 +22,7 @@ namespace ProjectManagementPortal
             builder.Services.AddScoped<IUser, UserService>();
             builder.Services.AddScoped<ITask, TaskService>();
             builder.Services.AddScoped<IProjectService, ProjectService>();
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
             // Retrieve the configuration
             var configuration = builder.Configuration;
@@ -32,6 +33,16 @@ namespace ProjectManagementPortal
                 options.UseSqlServer(configuration.GetConnectionString("ProjectManagementDBConnection"));
 
             });
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowLocalhost3000",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
 
             var app = builder.Build();
 
@@ -41,6 +52,7 @@ namespace ProjectManagementPortal
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseCors("AllowLocalhost3000");
 
             app.UseHttpsRedirection();
             app.UseAuthorization();

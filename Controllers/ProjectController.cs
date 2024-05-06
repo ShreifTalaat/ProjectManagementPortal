@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     public class ProjectController : ControllerBase
     {
         private readonly IProjectService _projectService;
@@ -20,6 +20,8 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Route("ListAll")]
+
         public IActionResult GetProjects()
         {
             var projects = _projectService.GetProjects();
@@ -27,10 +29,24 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        [Route("Add")]
+
         public IActionResult AddProject([FromBody] ProjectMV model)
         {
             var result = _projectService.AddProject(_mapper.Map<Project>(model));
-            return result > 0 ? Ok(result) : BadRequest("Failed to add project");
+            if (result == -3)
+            {
+                return Ok(new { data= -3, message = "Project with the same name already exists" });
+            }
+            else if (result > 0)
+            {
+                return Ok(new { status = 1, data = result });
+            }
+            else
+            {
+                return BadRequest("Failed to add project");
+            }
         }
+
     }
 }

@@ -6,6 +6,8 @@ using DAL.Models;
 
 namespace API.Controllers
 {
+    [ApiController]
+    [Route("api/")]
     public class UserController:ControllerBase
     {
         

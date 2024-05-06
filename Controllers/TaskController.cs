@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     public class TaskController : ControllerBase
     {
         private readonly ITask _taskService;
@@ -20,18 +20,30 @@ namespace API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public IActionResult GetTasks()
+        [HttpPost]
+        [Route("ListAll/{projectId}")]
+        public IActionResult GetTasks([FromRoute] int projectId)
         {
-            var tasks = _taskService.GetTasks();
+            var tasks = _taskService.GetRelatedTasks(projectId);
             return Ok(_mapper.Map<List<TaskMV>>(tasks));
         }
 
+
+
         [HttpPost]
+        [Route("Add")]
         public IActionResult AddTask([FromBody] TaskMV model)
-        {
+        {   
             var result = _taskService.AddTask(_mapper.Map<DAL.Models.Task>(model));
-            return result > 0 ? Ok(result) : BadRequest("Failed to add task");
+             if (result > 0)
+            {
+                return Ok(new { status = 1, data = result });
+            }
+            else
+            {
+                return BadRequest("Failed to add task");
+            }
         }
+
     }
 }

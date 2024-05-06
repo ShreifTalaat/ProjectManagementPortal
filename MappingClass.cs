@@ -16,7 +16,10 @@ namespace API.Mapping
             CreateMap<DAL.Models.User, BLL.ModelViews.UserMV>()
 .ReverseMap();
             CreateMap<DAL.Models.Task, BLL.ModelViews.TaskMV>().ReverseMap();
-            CreateMap<DAL.Models.Project, BLL.ModelViews.ProjectMV>().ReverseMap();
+            CreateMap<DAL.Models.Project, BLL.ModelViews.ProjectMV>()
+  
+       .ReverseMap();
+
 
         }
     }
